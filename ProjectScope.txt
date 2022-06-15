@@ -1,0 +1,12 @@
+Project:Role Base Access Control,
+Database Schema : {
+Role:{
+id,title,timestamp
+},
+Permissions:{
+id,permission,timestamp
+},
+User:{
+id,role_id,timestamp
+}
+}

@@ -1,0 +1,744 @@
+{
+	"info": {
+		"_postman_id": "fa85ba07-a58e-4981-b575-5b00b6220332",
+		"name": "order-management-backend-nodejs-express-mongodb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sultan Khan",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "sultan-malik",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "repeat_password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Sultan@yahoo.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "zubair@dev.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "141414",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXV6YW1taWwgU2hhYmJpciIsImVtYWlsIjoiTXV6YW1taWwtZGV2QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiTXV6YW1taWwtZGV2Iiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjMzNjMyMTY1LCJleHAiOjE2MzM2MzkzNjV9.ITvg3D4_kPqG77l4VlynOihgT3IUOdx38SkZvrGJciw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auth/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXV6YW1taWwgU2hhYmJpciIsImVtYWlsIjoiTXV6YW1taWwtZGV2QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiTXV6YW1taWwtZGV2Iiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjMzNjMyMTY1LCJleHAiOjE2MzM2MzkzNjV9.ITvg3D4_kPqG77l4VlynOihgT3IUOdx38SkZvrGJciw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auth/615f3e9e972afd303c2348b7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"615f3e9e972afd303c2348b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXV6YW1taWwgU2hhYmJpciIsImVtYWlsIjoiTXV6YW1taWwtZGV2QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiTXV6YW1taWwtZGV2Iiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjMzNjM0ODA5LCJleHAiOjE2MzM2NDIwMDl9.7YlmezvjW6xywYtVg_ovfH8cWxXCrnlKD8CKhnYQP5w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Muhammad Zubair",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "muhammad-zuabir",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "zubair@dev.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXV6YW1taWwgU2hhYmJpciIsImVtYWlsIjoiTXV6YW1taWwtZGV2QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiTXV6YW1taWwtZGV2Iiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjMzNjM0ODA5LCJleHAiOjE2MzM2NDIwMDl9.7YlmezvjW6xywYtVg_ovfH8cWxXCrnlKD8CKhnYQP5w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "141414",
+									"type": "text"
+								},
+								{
+									"key": "repeat_password",
+									"value": "141414",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/changePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXV6YW1taWwgU2hhYmJpciIsImVtYWlsIjoiTXV6YW1taWwtZGV2QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiTXV6YW1taWwtZGV2Iiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjMzNjM0ODA5LCJleHAiOjE2MzM2NDIwMDl9.7YlmezvjW6xywYtVg_ovfH8cWxXCrnlKD8CKhnYQP5w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auth/deactivate/615f3eda972afd303c2348bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"deactivate",
+								"615f3eda972afd303c2348bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Acctivate Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXV6YW1taWwgU2hhYmJpciIsImVtYWlsIjoiTXV6YW1taWwtZGV2QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiTXV6YW1taWwtZGV2Iiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjMzNjM0ODA5LCJleHAiOjE2MzM2NDIwMDl9.7YlmezvjW6xywYtVg_ovfH8cWxXCrnlKD8CKhnYQP5w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auth/activate/615f3eda972afd303c2348bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"activate",
+								"615f3eda972afd303c2348bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXVoYW1tYWQgWnViYWlyIiwiZW1haWwiOiJ6dWJhaXJAZGV2LmNvbSIsInVzZXJuYW1lIjoibXVoYW1tYWQtenVhYmlyIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjMzNzAyODgyLCJleHAiOjE2MzM3MTAwODJ9.KCivshpHkNMhvpc4iwhM9TWlWvHo4Tm2NDi8JAUo7S8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/dev/Desktop/pizza-images/5.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/addProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"addProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXVoYW1tYWQgWnViYWlyIiwiZW1haWwiOiJ6dWJhaXJAZGV2LmNvbSIsInVzZXJuYW1lIjoibXVoYW1tYWQtenVhYmlyIiwicm9sZSI6ImFkbWluIiwic3RhdHVzIjoiQWN0aXZlIiwiaWF0IjoxNjMzNzE3MzQ5LCJleHAiOjE2MzM3MjQ1NDl9.8xNpWVTJ5UPwtc99bTGueQlYAr2nr9MGXYEcL6_GdEM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Smooking ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "All School Books will be stored under this category",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXVoYW1tYWQgWnViYWlyIiwiZW1haWwiOiJ6dWJhaXJAZGV2LmNvbSIsInVzZXJuYW1lIjoibXVoYW1tYWQtenVhYmlyIiwicm9sZSI6ImFkbWluIiwiaW1hZ2UiOiJsb2NhbGhvc3Q6MzAwMC9wdWJsaWMvdXBsb2Fkcy91c2Vycy81NTdlNDQ5Zi02MjRhLTQ3ZjAtYTg1My1lNWE5MzdkNTZkMGYtLmpwZyIsInN0YXR1cyI6IkFjdGl2ZSIsImlhdCI6MTYzMzcxOTExMCwiZXhwIjoxNjMzNzI2MzEwfQ.VlpbfLyr6nlOJssuDGOVkRO0X7wq3wJlOhTZlpaRvM0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Stickers 2.0",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "All Stickers will be stored in this shelf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/edit/616093e95a64c330c48df671",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"edit",
+								"616093e95a64c330c48df671"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/616093d35a64c330c48df66b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"616093d35a64c330c48df66b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXVoYW1tYWQgWnViYWlyIiwiZW1haWwiOiJ6dWJhaXJAZGV2LmNvbSIsInVzZXJuYW1lIjoibXVoYW1tYWQtenVhYmlyIiwicm9sZSI6ImFkbWluIiwiaW1hZ2UiOiJsb2NhbGhvc3Q6MzAwMC9wdWJsaWMvdXBsb2Fkcy91c2Vycy81NTdlNDQ5Zi02MjRhLTQ3ZjAtYTg1My1lNWE5MzdkNTZkMGYtLmpwZyIsInN0YXR1cyI6IkFjdGl2ZSIsImlhdCI6MTYzMzcxOTExMCwiZXhwIjoxNjMzNzI2MzEwfQ.VlpbfLyr6nlOJssuDGOVkRO0X7wq3wJlOhTZlpaRvM0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/activate/616093d35a64c330c48df66b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"activate",
+								"616093d35a64c330c48df66b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/ac/616093d35a64c330c48df66b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"ac",
+								"616093d35a64c330c48df66b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXVoYW1tYWQgWnViYWlyIiwiZW1haWwiOiJ6dWJhaXJAZGV2LmNvbSIsInVzZXJuYW1lIjoibXVoYW1tYWQtenVhYmlyIiwicm9sZSI6ImFkbWluIiwiaW1hZ2UiOiJsb2NhbGhvc3Q6MzAwMC9wdWJsaWMvdXBsb2Fkcy91c2Vycy81NTdlNDQ5Zi02MjRhLTQ3ZjAtYTg1My1lNWE5MzdkNTZkMGYtLmpwZyIsInN0YXR1cyI6IkFjdGl2ZSIsImlhdCI6MTYzMzcxOTExMCwiZXhwIjoxNjMzNzI2MzEwfQ.VlpbfLyr6nlOJssuDGOVkRO0X7wq3wJlOhTZlpaRvM0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/616093d35a64c330c48df66b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"616093d35a64c330c48df66b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXVoYW1tYWQgWnViYWlyIiwiZW1haWwiOiJ6dWJhaXJAZGV2LmNvbSIsInVzZXJuYW1lIjoibXVoYW1tYWQtenVhYmlyIiwicm9sZSI6ImFkbWluIiwiaW1hZ2UiOiJsb2NhbGhvc3Q6MzAwMC9wdWJsaWMvdXBsb2Fkcy91c2Vycy81NTdlNDQ5Zi02MjRhLTQ3ZjAtYTg1My1lNWE5MzdkNTZkMGYtLmpwZyIsInN0YXR1cyI6IkFjdGl2ZSIsImlhdCI6MTYzMzk2NTMzMiwiZXhwIjoxNjMzOTcyNTMyfQ.fnXe2D-RdX9Dm3D3lFL88kd9nopjC5gr4wPV3TXCUCY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Alpine Pen 2.07",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "250",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "74",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "616093df5a64c330c48df66e",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/dev/Desktop/pizza-images/1.jpg"
+								},
+								{
+									"key": "description",
+									"value": "Test Product dddddddddddddddddddddddddddddddddddddddddddd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTVmM2U5ZTk3MmFmZDMwM2MyMzQ4YjciLCJuYW1lIjoiTXVoYW1tYWQgWnViYWlyIiwiZW1haWwiOiJ6dWJhaXJAZGV2LmNvbSIsInVzZXJuYW1lIjoibXVoYW1tYWQtenVhYmlyIiwicm9sZSI6ImFkbWluIiwiaW1hZ2UiOiJsb2NhbGhvc3Q6MzAwMC9wdWJsaWMvdXBsb2Fkcy91c2Vycy81NTdlNDQ5Zi02MjRhLTQ3ZjAtYTg1My1lNWE5MzdkNTZkMGYtLmpwZyIsInN0YXR1cyI6IkFjdGl2ZSIsImlhdCI6MTYzMzk2NTMzMiwiZXhwIjoxNjMzOTcyNTMyfQ.fnXe2D-RdX9Dm3D3lFL88kd9nopjC5gr4wPV3TXCUCY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Alpine 2.8",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "285",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "616093df5a64c330c48df66e",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Test Product dddddddddddddddddddddddddddddddddddddddddddd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/product/edit/61646736fa8d1f50a411f541",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"edit",
+								"61646736fa8d1f50a411f541"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/61646736fa8d1f50a411f541",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"61646736fa8d1f50a411f541"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
